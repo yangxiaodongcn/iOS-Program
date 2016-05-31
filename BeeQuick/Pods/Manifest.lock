@@ -1,0 +1,24 @@
+PODS:
+  - SVProgressHUD (2.0.3)
+  - UMengAnalytics (3.6.6)
+
+DEPENDENCIES:
+  - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
+  - UMengAnalytics
+
+EXTERNAL SOURCES:
+  SVProgressHUD:
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+
+CHECKOUT OPTIONS:
+  SVProgressHUD:
+    :commit: c406f0ac1929b21ab444608eb4ab27035bb57a21
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+
+SPEC CHECKSUMS:
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  UMengAnalytics: 4bf831415146b9c57cb10be65fbd43462ef8cf65
+
+PODFILE CHECKSUM: 6c19ff1df03b5e5293dc2ed4746a33f3b436c90d
+
+COCOAPODS: 1.0.0.beta.6

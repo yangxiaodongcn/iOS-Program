@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		054192665C0BC6D42C333E75A1EB8576 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A06113860818BBD36962602CF78A4E7 /* SVProgressHUD.m */; };
+		08409DB8DEB81612C1997097EB66DB87 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AB1E2F9450220E97A6051E8E1B1C9F3 /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E01AB4A45A24925DF68447E01A3F059 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A988274CA69FBD3014A7DFE49D699550 /* SVProgressHUD.bundle */; };
+		2D7528DE05F6AC1D8D7100F48FB21684 /* SVProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CAAFCEFA7D32CAB913AF20222C62317 /* SVProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51BE2A173575CD448CCE36655A4279F7 /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31246FA2EBC505AB33FBEE435054584D /* SVProgressHUD-dummy.m */; };
+		62A1FA78F2118C998C7B5F5AA6EA5823 /* Pods-LoveFreshBeenSimualtion-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AAE4F4E9AF7C11BB727BEDFFFDBBF31 /* Pods-LoveFreshBeenSimualtion-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		653B78B26FAE9FAEE7798E2EB17E160A /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFAD9DEC7BF310074E7A2BD87B27701 /* SVIndefiniteAnimatedView.m */; };
+		79D973F3CC4B82F7A80ADDF8F7F27F13 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A9FEEDED5F8E99DACF1B77DE59A3B1C /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		840B2CBF5D8270F2A713822280FE77FE /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 225B856DF9D63609458F0833AA05A5E6 /* SVRadialGradientLayer.m */; };
+		9B58AF3BEA9AD2A0EAFAB58C6B04DA95 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC46D8E1725AFCDC92AC218208534CEB /* QuartzCore.framework */; };
+		C0C59724583C62C969FFC0F5FD042DDA /* Pods-LoveFreshBeenSimualtion-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE91309844AA137E1942A50BD41C140E /* Pods-LoveFreshBeenSimualtion-dummy.m */; };
+		C8DCDC8F898071AD48DB6F544D727954 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E38116E3E114EC5EEB8BDD8FC278AAD /* Foundation.framework */; };
+		E364A1D51E6A8973B37EBD69AC21BBF4 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D0DDDCD3FF378774244F785BC2C5BB7 /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74CDE03BCF6F20DD6FD0050533FF54D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E38116E3E114EC5EEB8BDD8FC278AAD /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		245395278148C59C9AF50F1C8B446CA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBDEA084F32D1CB1DB57B1C90CAED5DE;
+			remoteInfo = SVProgressHUD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		225B856DF9D63609458F0833AA05A5E6 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = SVProgressHUD/SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		31246FA2EBC505AB33FBEE435054584D /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		3C785C0444C29381FDCD9FCCDDF2A00F /* Pods-LoveFreshBeenSimualtion.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LoveFreshBeenSimualtion.modulemap"; sourceTree = "<group>"; };
+		3DFAD9DEC7BF310074E7A2BD87B27701 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		497C073B016B2BBB53858F58084D42C1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AAE4F4E9AF7C11BB727BEDFFFDBBF31 /* Pods-LoveFreshBeenSimualtion-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LoveFreshBeenSimualtion-umbrella.h"; sourceTree = "<group>"; };
+		57401937507037F17A58F78D8BC06F22 /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
+		5CAAFCEFA7D32CAB913AF20222C62317 /* SVProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		5E38116E3E114EC5EEB8BDD8FC278AAD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		692613CA0FE38E425FBE9CBC03B39D25 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C875EFD3FE82879721B4DD28AA38EB7 /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		71B038E8300CE77C3D8D48789213AE38 /* Pods-LoveFreshBeenSimualtion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LoveFreshBeenSimualtion.release.xcconfig"; sourceTree = "<group>"; };
+		7A06113860818BBD36962602CF78A4E7 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
+		7A9FEEDED5F8E99DACF1B77DE59A3B1C /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		7CEF36C535EEF22F9D1414F7690A01DA /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
+		7D0DDDCD3FF378774244F785BC2C5BB7 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		7ED79AE080E93D085C72F32FDA19467D /* Pods-LoveFreshBeenSimualtion-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LoveFreshBeenSimualtion-frameworks.sh"; sourceTree = "<group>"; };
+		82F2D9CE58DE4ADA2DCD16DFBE205DDD /* Pods-LoveFreshBeenSimualtion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LoveFreshBeenSimualtion.debug.xcconfig"; sourceTree = "<group>"; };
+		8AB1E2F9450220E97A6051E8E1B1C9F3 /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
+		A96459FF805E9AD100A291449B10153F /* Pods_LoveFreshBeenSimualtion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveFreshBeenSimualtion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A988274CA69FBD3014A7DFE49D699550 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
+		B50938DAF3846049BB28F66878824FCF /* Pods-LoveFreshBeenSimualtion-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LoveFreshBeenSimualtion-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BE91309844AA137E1942A50BD41C140E /* Pods-LoveFreshBeenSimualtion-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LoveFreshBeenSimualtion-dummy.m"; sourceTree = "<group>"; };
+		D4FB31ACE0C635EA6E44B94C2C8EB1CA /* Pods-LoveFreshBeenSimualtion-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LoveFreshBeenSimualtion-acknowledgements.plist"; sourceTree = "<group>"; };
+		E33113D53B1B17FE5D1A28AF8B3FCCE6 /* Pods-LoveFreshBeenSimualtion-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LoveFreshBeenSimualtion-resources.sh"; sourceTree = "<group>"; };
+		E39D18B57A02C7D5D4F68BE4BC721A92 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC46D8E1725AFCDC92AC218208534CEB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88C815FEAE8A19727039FD3E571BFAC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8DCDC8F898071AD48DB6F544D727954 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98999D26345CBB709846A8A63617569C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74CDE03BCF6F20DD6FD0050533FF54D /* Foundation.framework in Frameworks */,
+				9B58AF3BEA9AD2A0EAFAB58C6B04DA95 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C1F748848A5E9C732AF928535D8A095 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B22562016322FD0A47AE4FABD7781BD /* Pods-LoveFreshBeenSimualtion */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3B22562016322FD0A47AE4FABD7781BD /* Pods-LoveFreshBeenSimualtion */ = {
+			isa = PBXGroup;
+			children = (
+				497C073B016B2BBB53858F58084D42C1 /* Info.plist */,
+				3C785C0444C29381FDCD9FCCDDF2A00F /* Pods-LoveFreshBeenSimualtion.modulemap */,
+				B50938DAF3846049BB28F66878824FCF /* Pods-LoveFreshBeenSimualtion-acknowledgements.markdown */,
+				D4FB31ACE0C635EA6E44B94C2C8EB1CA /* Pods-LoveFreshBeenSimualtion-acknowledgements.plist */,
+				BE91309844AA137E1942A50BD41C140E /* Pods-LoveFreshBeenSimualtion-dummy.m */,
+				7ED79AE080E93D085C72F32FDA19467D /* Pods-LoveFreshBeenSimualtion-frameworks.sh */,
+				E33113D53B1B17FE5D1A28AF8B3FCCE6 /* Pods-LoveFreshBeenSimualtion-resources.sh */,
+				4AAE4F4E9AF7C11BB727BEDFFFDBBF31 /* Pods-LoveFreshBeenSimualtion-umbrella.h */,
+				82F2D9CE58DE4ADA2DCD16DFBE205DDD /* Pods-LoveFreshBeenSimualtion.debug.xcconfig */,
+				71B038E8300CE77C3D8D48789213AE38 /* Pods-LoveFreshBeenSimualtion.release.xcconfig */,
+			);
+			name = "Pods-LoveFreshBeenSimualtion";
+			path = "Target Support Files/Pods-LoveFreshBeenSimualtion";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0525A0EB9A9840C5D1396127AE7FEAF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		646FB7A3B5B7952628988DE30F8B3B1F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A988274CA69FBD3014A7DFE49D699550 /* SVProgressHUD.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				EC0A49D3393F61A8C4C3116270299E55 /* Pods */,
+				8EE9BA4E5B9AFD9DF3911A606E12D5E8 /* Products */,
+				1C1F748848A5E9C732AF928535D8A095 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8EE9BA4E5B9AFD9DF3911A606E12D5E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A96459FF805E9AD100A291449B10153F /* Pods_LoveFreshBeenSimualtion.framework */,
+				692613CA0FE38E425FBE9CBC03B39D25 /* SVProgressHUD.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7A88089DDF8D7117F8DC88CA6498BDE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E39D18B57A02C7D5D4F68BE4BC721A92 /* Info.plist */,
+				7CEF36C535EEF22F9D1414F7690A01DA /* SVProgressHUD.modulemap */,
+				57401937507037F17A58F78D8BC06F22 /* SVProgressHUD.xcconfig */,
+				31246FA2EBC505AB33FBEE435054584D /* SVProgressHUD-dummy.m */,
+				6C875EFD3FE82879721B4DD28AA38EB7 /* SVProgressHUD-prefix.pch */,
+				5CAAFCEFA7D32CAB913AF20222C62317 /* SVProgressHUD-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SVProgressHUD";
+			sourceTree = "<group>";
+		};
+		B0525A0EB9A9840C5D1396127AE7FEAF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5E38116E3E114EC5EEB8BDD8FC278AAD /* Foundation.framework */,
+				FC46D8E1725AFCDC92AC218208534CEB /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DF4F84C5813CA4D1EE542F150874FA1B /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				7D0DDDCD3FF378774244F785BC2C5BB7 /* SVIndefiniteAnimatedView.h */,
+				3DFAD9DEC7BF310074E7A2BD87B27701 /* SVIndefiniteAnimatedView.m */,
+				8AB1E2F9450220E97A6051E8E1B1C9F3 /* SVProgressHUD.h */,
+				7A06113860818BBD36962602CF78A4E7 /* SVProgressHUD.m */,
+				7A9FEEDED5F8E99DACF1B77DE59A3B1C /* SVRadialGradientLayer.h */,
+				225B856DF9D63609458F0833AA05A5E6 /* SVRadialGradientLayer.m */,
+				646FB7A3B5B7952628988DE30F8B3B1F /* Resources */,
+				A7A88089DDF8D7117F8DC88CA6498BDE /* Support Files */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		EC0A49D3393F61A8C4C3116270299E55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF4F84C5813CA4D1EE542F150874FA1B /* SVProgressHUD */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3EAB4E94596B9C1A3FB883CB8C310323 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E364A1D51E6A8973B37EBD69AC21BBF4 /* SVIndefiniteAnimatedView.h in Headers */,
+				2D7528DE05F6AC1D8D7100F48FB21684 /* SVProgressHUD-umbrella.h in Headers */,
+				08409DB8DEB81612C1997097EB66DB87 /* SVProgressHUD.h in Headers */,
+				79D973F3CC4B82F7A80ADDF8F7F27F13 /* SVRadialGradientLayer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1969ECE48BD6261199B09167B76BF3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62A1FA78F2118C998C7B5F5AA6EA5823 /* Pods-LoveFreshBeenSimualtion-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		485CFE29F866CFD6017C650DC557A170 /* Pods-LoveFreshBeenSimualtion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8748A7BCA914E04FC48F874DF2941B1 /* Build configuration list for PBXNativeTarget "Pods-LoveFreshBeenSimualtion" */;
+			buildPhases = (
+				8CBF795911019EE75F5594407011B493 /* Sources */,
+				88C815FEAE8A19727039FD3E571BFAC3 /* Frameworks */,
+				4C1969ECE48BD6261199B09167B76BF3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A135FE97780FD80AAF4D26742A6FD7C /* PBXTargetDependency */,
+			);
+			name = "Pods-LoveFreshBeenSimualtion";
+			productName = "Pods-LoveFreshBeenSimualtion";
+			productReference = A96459FF805E9AD100A291449B10153F /* Pods_LoveFreshBeenSimualtion.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BBDEA084F32D1CB1DB57B1C90CAED5DE /* SVProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7959C14B0C0F70D68CAF452096417AF /* Build configuration list for PBXNativeTarget "SVProgressHUD" */;
+			buildPhases = (
+				B076ABBD4E50C78649A79826EFFAC8DD /* Sources */,
+				98999D26345CBB709846A8A63617569C /* Frameworks */,
+				3EAB4E94596B9C1A3FB883CB8C310323 /* Headers */,
+				8AEB23D612CEBC937BA368AD0E1D3FDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SVProgressHUD;
+			productName = SVProgressHUD;
+			productReference = 692613CA0FE38E425FBE9CBC03B39D25 /* SVProgressHUD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 8EE9BA4E5B9AFD9DF3911A606E12D5E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				485CFE29F866CFD6017C650DC557A170 /* Pods-LoveFreshBeenSimualtion */,
+				BBDEA084F32D1CB1DB57B1C90CAED5DE /* SVProgressHUD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AEB23D612CEBC937BA368AD0E1D3FDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E01AB4A45A24925DF68447E01A3F059 /* SVProgressHUD.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CBF795911019EE75F5594407011B493 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0C59724583C62C969FFC0F5FD042DDA /* Pods-LoveFreshBeenSimualtion-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B076ABBD4E50C78649A79826EFFAC8DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653B78B26FAE9FAEE7798E2EB17E160A /* SVIndefiniteAnimatedView.m in Sources */,
+				51BE2A173575CD448CCE36655A4279F7 /* SVProgressHUD-dummy.m in Sources */,
+				054192665C0BC6D42C333E75A1EB8576 /* SVProgressHUD.m in Sources */,
+				840B2CBF5D8270F2A713822280FE77FE /* SVRadialGradientLayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A135FE97780FD80AAF4D26742A6FD7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SVProgressHUD;
+			target = BBDEA084F32D1CB1DB57B1C90CAED5DE /* SVProgressHUD */;
+			targetProxy = 245395278148C59C9AF50F1C8B446CA0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2EECD5190C8B7E7032497C1A3ACD4474 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57401937507037F17A58F78D8BC06F22 /* SVProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SVProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6B076B10B74AE7C2CDC0F7CAE9A9A16B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82F2D9CE58DE4ADA2DCD16DFBE205DDD /* Pods-LoveFreshBeenSimualtion.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LoveFreshBeenSimualtion/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LoveFreshBeenSimualtion/Pods-LoveFreshBeenSimualtion.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LoveFreshBeenSimualtion;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		811519CB8F683AC06F9C98B55AC40F11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		882EB4391EC2E701934974DA86F7343F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8F23C3FFEDD968DEC1590208E27D9576 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71B038E8300CE77C3D8D48789213AE38 /* Pods-LoveFreshBeenSimualtion.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LoveFreshBeenSimualtion/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LoveFreshBeenSimualtion/Pods-LoveFreshBeenSimualtion.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LoveFreshBeenSimualtion;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DC56EE6E96B35F16053668BEA89FEEC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57401937507037F17A58F78D8BC06F22 /* SVProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SVProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				882EB4391EC2E701934974DA86F7343F /* Debug */,
+				811519CB8F683AC06F9C98B55AC40F11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7959C14B0C0F70D68CAF452096417AF /* Build configuration list for PBXNativeTarget "SVProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC56EE6E96B35F16053668BEA89FEEC0 /* Debug */,
+				2EECD5190C8B7E7032497C1A3ACD4474 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8748A7BCA914E04FC48F874DF2941B1 /* Build configuration list for PBXNativeTarget "Pods-LoveFreshBeenSimualtion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B076B10B74AE7C2CDC0F7CAE9A9A16B /* Debug */,
+				8F23C3FFEDD968DEC1590208E27D9576 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
