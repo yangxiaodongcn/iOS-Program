@@ -226,12 +226,12 @@
 			children = (
 				CB90B79A1D8E2F2F00CC9D8E /* Assets.xcassets */,
 				CB90B7E31D8E305600CC9D8E /* Media.xcassets */,
+				CBCD53231D8E6657005ACB3A /* Extension.bundle */,
 				CB90B7CD1D8E2F4A00CC9D8E /* Audio */,
 				CB90B7CE1D8E2F4A00CC9D8E /* Data */,
 				CB90B7CF1D8E2F4A00CC9D8E /* File */,
 				CB90B7D01D8E2F4A00CC9D8E /* Font */,
 				CB90B7D11D8E2F4A00CC9D8E /* Plist */,
-				CBCD53231D8E6657005ACB3A /* Extension.bundle */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
