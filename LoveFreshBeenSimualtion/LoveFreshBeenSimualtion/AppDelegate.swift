@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var adViewController: ADViewController?
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         setUMeng()
         addNotification()
@@ -23,37 +23,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    private func setUMeng() {
+    fileprivate func setUMeng() {
         
     }
     
-    private func  addNotification() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "showMainTabbarControllerSucess:", name: ADImageLoadSecussed, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "showMainTabbarControllerFale", name: ADImageLoadFail, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "shoMainTabBarController", name: GuideViewControllerDidFinish, object: nil)
+    fileprivate func  addNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.showMainTabbarControllerSucess(_:)), name: NSNotification.Name(rawValue: ADImageLoadSecussed), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.showMainTabbarControllerFale), name: NSNotification.Name(rawValue: ADImageLoadFail), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.shoMainTabBarController), name: NSNotification.Name(rawValue: GuideViewControllerDidFinish), object: nil)
     }
     
-    private func buildKeyWindow() {
+    fileprivate func buildKeyWindow() {
         window = UIWindow(frame: ScreenBounds)
         window?.makeKeyAndVisible()
         
-        let isFristOpen = NSUserDefaults.standardUserDefaults().objectForKey("isFristOpenApp")
+        let isFristOpen = UserDefaults.standard.object(forKey: "isFristOpenApp")
         
         if isFristOpen == nil {
             window?.rootViewController = GuideViewController()
-            NSUserDefaults.standardUserDefaults().setObject("isFristOpenApp", forKey: "isFristOpenApp")
+            UserDefaults.standard.set("isFristOpenApp", forKey: "isFristOpenApp")
         } else {
             loadADRootViewController()
         }
     }
     
-    private func loadADRootViewController() {
+    fileprivate func loadADRootViewController() {
         adViewController = ADViewController()
         adViewController!.imageName = "http://img01.bqstatic.com/upload/activity/2016011111271995.jpg"
         window?.rootViewController = adViewController
     }
   
-    func showMainTabbarControllerSucess(noti: NSNotification) {
+    func showMainTabbarControllerSucess(_ noti: Notification) {
        print(ADImageLoadSecussed)
     }
     

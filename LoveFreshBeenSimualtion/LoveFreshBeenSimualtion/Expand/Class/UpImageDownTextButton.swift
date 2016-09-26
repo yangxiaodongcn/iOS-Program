@@ -14,11 +14,11 @@ class UpImageDownTextButton: UIButton {
         super.layoutSubviews()
         
         titleLabel?.sizeToFit()
-        titleLabel?.frame = CGRectMake(0, height - 15, width, (titleLabel?.height)!)
-        titleLabel?.textAlignment = .Center
+        titleLabel?.frame = CGRect(x: 0, y: height - 15, width: width, height: (titleLabel?.height)!)
+        titleLabel?.textAlignment = .center
         
-        imageView?.frame = CGRectMake(0, 0, width, height - 15)
-        imageView?.contentMode = UIViewContentMode.Center
+        imageView?.frame = CGRect(x: 0, y: 0, width: width, height: height - 15)
+        imageView?.contentMode = UIViewContentMode.center
     }
 
 }

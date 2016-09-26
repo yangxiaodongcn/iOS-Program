@@ -10,28 +10,28 @@ import UIKit
 
 class GuideViewController: BaseViewController {
     
-    private var collectionView: GuideCollectionView?
-    private var pageControl: UIPageControl?
-    private var imageNames = ["guide_40_1", "guide_40_2", "guide_40_3", "guide_40_4"]
-    private let cellIdentifier = "GuideCell"
-    private let frameBounds = ScreenBounds
+    fileprivate var collectionView: GuideCollectionView?
+    fileprivate var pageControl: UIPageControl?
+    fileprivate var imageNames = ["guide_40_1", "guide_40_2", "guide_40_3", "guide_40_4"]
+    fileprivate let cellIdentifier = "GuideCell"
+    fileprivate let frameBounds = ScreenBounds
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: UIStatusBarAnimation.None)
+        UIApplication.shared.setStatusBarHidden(false, with: UIStatusBarAnimation.none)
         
         buildCollectionView()
         buildPageControl()
     }
     
-    private func buildPageControl() {
-        pageControl = UIPageControl(frame: CGRectMake(0, ScreenHeight - 50, ScreenWidth, 20))
+    fileprivate func buildPageControl() {
+        pageControl = UIPageControl(frame: CGRect(x: 0, y: ScreenHeight - 50, width: ScreenWidth, height: 20))
         pageControl!.numberOfPages = imageNames.count
         pageControl!.currentPage = 0
         view.addSubview(pageControl!)
     }
     
-    private func buildCollectionView() {
+    fileprivate func buildCollectionView() {
         collectionView = GuideCollectionView(frame: frameBounds, identifier: cellIdentifier)
         collectionView!.delegate = self
         collectionView!.dataSource = self
@@ -41,15 +41,15 @@ class GuideViewController: BaseViewController {
 
 extension GuideViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageNames.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! GuideCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! GuideCollectionViewCell
         
-        cell.image = UIImage(named: imageNames[indexPath.row])
-        if indexPath.row != imageNames.count-1 {
+        cell.image = UIImage(named: imageNames[(indexPath as NSIndexPath).row])
+        if (indexPath as NSIndexPath).row != imageNames.count-1 {
             cell.nextButtonHidden = true
         } else {
             cell.nextButtonHidden = false
@@ -57,7 +57,7 @@ extension GuideViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return cell
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         pageControl?.currentPage = Int(scrollView.contentOffset.x / ScreenWidth + 0.5)
     }
 }

@@ -16,15 +16,15 @@ class GuideCollectionView: UICollectionView {
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         layout.itemSize = frame.size
-        layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        layout.scrollDirection = UICollectionViewScrollDirection.horizontal
         
         super.init(frame: frame, collectionViewLayout: layout)
         
         showsHorizontalScrollIndicator = false
         showsVerticalScrollIndicator = false
-        pagingEnabled = true
+        isPagingEnabled = true
         bounces = false
-        registerClass(GuideCollectionViewCell.self, forCellWithReuseIdentifier: identifier)
+        register(GuideCollectionViewCell.self, forCellWithReuseIdentifier: identifier)
     }
 
     required init?(coder aDecoder: NSCoder) {

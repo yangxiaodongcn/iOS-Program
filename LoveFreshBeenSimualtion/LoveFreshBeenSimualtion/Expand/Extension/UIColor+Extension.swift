@@ -10,7 +10,7 @@ import UIKit
 
 extension UIColor {
 
-    class func colorWithCustom(red red: CGFloat, gree: CGFloat, blue: CGFloat) -> UIColor {
+    class func colorWithCustom(red: CGFloat, gree: CGFloat, blue: CGFloat) -> UIColor {
         return UIColor(red: red / 255.0, green: gree / 255.0, blue: blue / 255.0, alpha: 1)
     }
     

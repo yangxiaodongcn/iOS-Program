@@ -18,7 +18,7 @@ class AnimationTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "searchViewControllerDeinit", name: "LFBSearchViewControllerDeinit", object: nil)
+        NotificationCenter.default.addObserver(self, selector: "searchViewControllerDeinit", name: NSNotification.Name(rawValue: "LFBSearchViewControllerDeinit"), object: nil)
     }
     
     func LFBSearchViewControllerDeinit() {

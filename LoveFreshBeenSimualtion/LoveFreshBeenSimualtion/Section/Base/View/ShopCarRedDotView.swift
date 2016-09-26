@@ -10,46 +10,46 @@ import UIKit
 
 class ShopCarRedDotView: UIView {
     
-    private static let instance = ShopCarRedDotView()
+    fileprivate static let instance = ShopCarRedDotView()
     
     class var sharedInstance: ShopCarRedDotView {
         return instance
     }
     
-    private var numberLabel: UILabel?
-    private var redImageView: UIImageView?
+    fileprivate var numberLabel: UILabel?
+    fileprivate var redImageView: UIImageView?
     
     var buyNumber: Int = 0 {
         didSet {
             if buyNumber == 0 {
                 numberLabel?.text = ""
-                hidden = true
+                isHidden = true
             } else {
                 if buyNumber > 99 {
-                    numberLabel?.font = UIFont.systemFontOfSize(8.0)
+                    numberLabel?.font = UIFont.systemFont(ofSize: 8.0)
                 } else {
-                    numberLabel?.font = UIFont.systemFontOfSize(10.0)
+                    numberLabel?.font = UIFont.systemFont(ofSize: 10.0)
                 }
                 numberLabel?.text = "\(buyNumber)"
-                hidden = false
+                isHidden = false
             }
         }
     }
 
     override init(frame: CGRect) {
-        super.init(frame: CGRectMake(frame.origin.x, frame.origin.y, 20, 20))
-        backgroundColor = UIColor.clearColor()
+        super.init(frame: CGRect(x: frame.origin.x, y: frame.origin.y, width: 20, height: 20))
+        backgroundColor = UIColor.clear
         
         redImageView = UIImageView(image: UIImage(named: "reddot"))
         addSubview(redImageView!)
         
         numberLabel = UILabel()
-        numberLabel!.font = UIFont.systemFontOfSize(10)
-        numberLabel!.textColor = UIColor.whiteColor()
-        numberLabel!.textAlignment = NSTextAlignment.Center
+        numberLabel!.font = UIFont.systemFont(ofSize: 10)
+        numberLabel!.textColor = UIColor.white
+        numberLabel!.textAlignment = NSTextAlignment.center
         addSubview(numberLabel!)
         
-        hidden = true
+        isHidden = true
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -58,32 +58,32 @@ class ShopCarRedDotView: UIView {
     
     override func layoutSubviews() {
         redImageView?.frame = bounds
-        numberLabel?.frame = CGRectMake(0, 0, width, height)
+        numberLabel?.frame = CGRect(x: 0, y: 0, width: width, height: height)
     }
     
-    func addProductToRedDotView(animation: Bool) {
-        buyNumber++
+    func addProductToRedDotView(_ animation: Bool) {
+        buyNumber += 1
         
         if animation {
             reddotAnimation()
         }
     }
     
-    func reduceProductToRedDotView(animation: Bool) {
+    func reduceProductToRedDotView(_ animation: Bool) {
         if buyNumber > 0 {
-            buyNumber--
+            buyNumber -= 1
         }
         
         if animation {
             reddotAnimation()
         }
     }
-    private func reddotAnimation() {
-        UIView.animateWithDuration(ShopCarRedDotAnimationDuration, animations: { ()-> Void in
-            self.transform = CGAffineTransformMakeScale(1.5, 1.5)
+    fileprivate func reddotAnimation() {
+        UIView.animate(withDuration: ShopCarRedDotAnimationDuration, animations: { ()-> Void in
+            self.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
             }, completion: { (Bool) -> Void in
-                UIView.animateWithDuration(ShopCarRedDotAnimationDuration, animations: { () -> Void in
-                    self.transform = CGAffineTransformIdentity
+                UIView.animate(withDuration: ShopCarRedDotAnimationDuration, animations: { () -> Void in
+                    self.transform = CGAffineTransform.identity
                     }, completion: nil)
                 })
     }

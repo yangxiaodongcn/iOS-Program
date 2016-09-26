@@ -10,8 +10,8 @@ import UIKit
 
 class GuideCollectionViewCell: UICollectionViewCell {
     
-    private var imageView: UIImageView?
-    private var nextButton: UIButton?
+    fileprivate var imageView: UIImageView?
+    fileprivate var nextButton: UIButton?
     
     var image: UIImage? {
         didSet {
@@ -22,7 +22,7 @@ class GuideCollectionViewCell: UICollectionViewCell {
     var nextButtonHidden: Bool? {
         didSet {
             if let hidden = nextButtonHidden {
-                nextButton?.hidden = hidden
+                nextButton?.isHidden = hidden
             }
         }
     }
@@ -35,17 +35,17 @@ class GuideCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         imageView = UIImageView(frame: ScreenBounds)
-        imageView!.contentMode = UIViewContentMode.ScaleAspectFill
+        imageView!.contentMode = UIViewContentMode.scaleAspectFill
         contentView.addSubview(imageView!)
         
-        nextButton = UIButton(frame: CGRectMake((ScreenBounds.width-100)/2, ScreenBounds.height-90, 100, 33))
-        nextButton!.setBackgroundImage(UIImage(named: "icon_next"), forState: UIControlState.Normal)
-        nextButton!.hidden = true
-        nextButton!.addTarget(self, action: "nextButtonClick", forControlEvents: UIControlEvents.TouchUpInside)
+        nextButton = UIButton(frame: CGRect(x: (ScreenBounds.width-100)/2, y: ScreenBounds.height-90, width: 100, height: 33))
+        nextButton!.setBackgroundImage(UIImage(named: "icon_next"), for: UIControlState())
+        nextButton!.isHidden = true
+        nextButton!.addTarget(self, action: #selector(GuideCollectionViewCell.nextButtonClick), for: UIControlEvents.touchUpInside)
         contentView.addSubview(nextButton!)
     }
     
     func nextButtonClick() {
-        NSNotificationCenter.defaultCenter().postNotificationName(GuideViewControllerDidFinish, object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: GuideViewControllerDidFinish), object: nil)
     }
 }

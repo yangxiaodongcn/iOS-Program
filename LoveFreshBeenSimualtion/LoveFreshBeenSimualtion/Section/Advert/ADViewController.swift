@@ -10,7 +10,7 @@ import UIKit
 
 class ADViewController: UIViewController {
     
-    private lazy var backImageView: UIImageView = UIImageView(frame: ScreenBounds)
+    fileprivate lazy var backImageView: UIImageView = UIImageView(frame: ScreenBounds)
     
     var imageName: String? {
         didSet {
@@ -26,35 +26,35 @@ class ADViewController: UIViewController {
                 placeholderImageName = "iphone6s"
             }
             
-            backImageView.sd_setImageWithURL(NSURL(string: imageName!), placeholderImage: UIImage(named: placeholderImageName!)) {
+            backImageView.sd_setImage(with: URL(string: imageName!), placeholderImage: UIImage(named: placeholderImageName!)) {
                 (image, error, _, _) -> Void in
                 
                 print("In sd_setImageWithURL")
                 
                 if error != nil {
                     print("加载广告失败")
-                    NSNotificationCenter.defaultCenter().postNotificationName(ADImageLoadFail, object: nil)
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: ADImageLoadFail), object: nil)
                 }
                 
                 if image != nil {
-                    let time_1 = dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC)))
-                    dispatch_after(time_1, dispatch_get_main_queue()) {
+                    let time_1 = DispatchTime.now() + Double(Int64(1.0 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+                    DispatchQueue.main.asyncAfter(deadline: time_1) {
                         () -> Void in
-                        UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: UIStatusBarAnimation.Fade)
+                        UIApplication.shared.setStatusBarHidden(false, with: UIStatusBarAnimation.fade)
                         
                         print("Delay 1 second")
                         
-                        let time_2 = dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 * Double(NSEC_PER_SEC)))
-                            dispatch_after(time_2, dispatch_get_main_queue()) {
+                        let time_2 = DispatchTime.now() + Double(Int64(0.5 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+                            DispatchQueue.main.asyncAfter(deadline: time_2) {
                                 
                                print("Delay 05. second")
                                 
-                               NSNotificationCenter.defaultCenter().postNotificationName(ADImageLoadSecussed, object: image)
+                               NotificationCenter.default.post(name: Notification.Name(rawValue: ADImageLoadSecussed), object: image)
                         }
                     }
                 } else {
                     print("加载广告失败")
-                    NSNotificationCenter.defaultCenter().postNotificationName(ADImageLoadFail, object: nil)
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: ADImageLoadFail), object: nil)
                 }
             }
         }
@@ -64,6 +64,6 @@ class ADViewController: UIViewController {
         super.viewDidLoad()
 
         view.addSubview(backImageView)
-        UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: UIStatusBarAnimation.None)
+        UIApplication.shared.setStatusBarHidden(true, with: UIStatusBarAnimation.none)
     }
 }

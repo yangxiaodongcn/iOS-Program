@@ -11,11 +11,11 @@ import AVFoundation
 
 class QRCodeViewController: BaseViewController, AVCaptureMetadataOutputObjectsDelegate {
     
-    private var titleLabel = UILabel()
-    private var captureSession: AVCaptureSession?
-    private var videoPreviewLayer: AVCaptureVideoPreviewLayer?
-    private var animationLineView = UIImageView()
-    private var timer: NSTimer?
+    fileprivate var titleLabel = UILabel()
+    fileprivate var captureSession: AVCaptureSession?
+    fileprivate var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    fileprivate var animationLineView = UIImageView()
+    fileprivate var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,23 +23,23 @@ class QRCodeViewController: BaseViewController, AVCaptureMetadataOutputObjectsDe
         // Do any additional setup after loading the view.
     }
     
-    private func buildNavigationItem() {
+    fileprivate func buildNavigationItem() {
         navigationItem.title = "二维码"
         navigationController?.navigationBar.barTintColor = LFBNavigationBarWhiteBackgroundColor
     }
     
-    private func buildTitleLabel() {
+    fileprivate func buildTitleLabel() {
         
-        titleLabel.textColor = UIColor.whiteColor()
-        titleLabel.font = UIFont.systemFontOfSize(16)
-        titleLabel.frame = CGRectMake(0, 340, ScreenWidth, 30)
-        titleLabel.textAlignment = NSTextAlignment.Center
+        titleLabel.textColor = UIColor.white
+        titleLabel.font = UIFont.systemFont(ofSize: 16)
+        titleLabel.frame = CGRect(x: 0, y: 340, width: ScreenWidth, height: 30)
+        titleLabel.textAlignment = NSTextAlignment.center
         view.addSubview(titleLabel)
     }
     
-    private func buildInputAVCaptureDevice() {
+    fileprivate func buildInputAVCaptureDevice() {
         
-        let captureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+        let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         titleLabel.text = "将店铺二维码对准方块内既可收藏店铺"
         guard let input = try? AVCaptureDeviceInput(device: captureDevice) else {
             titleLabel.text = "没有摄像头你描个蛋啊~换真机试试"
@@ -50,7 +50,7 @@ class QRCodeViewController: BaseViewController, AVCaptureMetadataOutputObjectsDe
         captureSession = AVCaptureSession()
         captureSession?.addInput(input)
         captureSession?.addOutput(captureMetadataOutput)
-        let dispatchQueue = dispatch_queue_create("myQueue", nil)
+        let dispatchQueue = DispatchQueue(label: "myQueue", attributes: [])
         captureMetadataOutput.setMetadataObjectsDelegate(self, queue: dispatchQueue)
         captureMetadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode, AVMetadataObjectTypeAztecCode]
         
@@ -58,25 +58,25 @@ class QRCodeViewController: BaseViewController, AVCaptureMetadataOutputObjectsDe
         videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
         videoPreviewLayer?.frame = view.layer.frame
         view.layer.addSublayer(videoPreviewLayer!)
-        captureMetadataOutput.rectOfInterest = CGRectMake(0, 0, 1, 1)
+        captureMetadataOutput.rectOfInterest = CGRect(x: 0, y: 0, width: 1, height: 1)
         
         captureSession?.startRunning()
     }
 
-    private func buildFrameImageView() {
+    fileprivate func buildFrameImageView() {
 
-        let lineT = [CGRectMake(0, 0, ScreenWidth, 100),
-                     CGRectMake(0, 100, ScreenWidth * 0.2, ScreenWidth * 0.6),
-                     CGRectMake(0, 100 + ScreenWidth * 0.6, ScreenWidth, ScreenHeight - 100 - ScreenWidth * 0.6),
-                     CGRectMake(ScreenWidth * 0.8, 100, ScreenWidth * 0.2, ScreenWidth * 0.6)]
+        let lineT = [CGRect(x: 0, y: 0, width: ScreenWidth, height: 100),
+                     CGRect(x: 0, y: 100, width: ScreenWidth * 0.2, height: ScreenWidth * 0.6),
+                     CGRect(x: 0, y: 100 + ScreenWidth * 0.6, width: ScreenWidth, height: ScreenHeight - 100 - ScreenWidth * 0.6),
+                     CGRect(x: ScreenWidth * 0.8, y: 100, width: ScreenWidth * 0.2, height: ScreenWidth * 0.6)]
         for lineFrame in lineT {
             buildTransparentView(lineFrame)
         }
         
-        let lineR = [CGRectMake(ScreenWidth * 0.2, 100, ScreenWidth * 0.6, 2),
-                     CGRectMake(ScreenWidth * 0.2, 100, 2, ScreenWidth * 0.6),
-                     CGRectMake(ScreenWidth * 0.8 - 2, 100, 2, ScreenWidth * 0.6),
-                     CGRectMake(ScreenWidth * 0.2, 100 + ScreenWidth * 0.6, ScreenWidth * 0.6, 2)]
+        let lineR = [CGRect(x: ScreenWidth * 0.2, y: 100, width: ScreenWidth * 0.6, height: 2),
+                     CGRect(x: ScreenWidth * 0.2, y: 100, width: 2, height: ScreenWidth * 0.6),
+                     CGRect(x: ScreenWidth * 0.8 - 2, y: 100, width: 2, height: ScreenWidth * 0.6),
+                     CGRect(x: ScreenWidth * 0.2, y: 100 + ScreenWidth * 0.6, width: ScreenWidth * 0.6, height: 2)]
         for lineFrame in lineR {
             buildLineView(lineFrame)
         }
@@ -85,55 +85,55 @@ class QRCodeViewController: BaseViewController, AVCaptureMetadataOutputObjectsDe
         let yellowWidth: CGFloat = 30
         let yellowX: CGFloat = ScreenWidth * 0.2
         let bottomY: CGFloat = 100 + ScreenWidth * 0.6
-        let lineY = [CGRectMake(yellowX, 100, yellowWidth, yellowHeight),
-                     CGRectMake(yellowX, 100, yellowHeight, yellowWidth),
-                     CGRectMake(ScreenWidth * 0.8 - yellowHeight, 100, yellowHeight, yellowWidth),
-                     CGRectMake(ScreenWidth * 0.8 - yellowWidth, 100, yellowWidth, yellowHeight),
-                     CGRectMake(yellowX, bottomY - yellowHeight + 2, yellowWidth, yellowHeight),
-                     CGRectMake(ScreenWidth * 0.8 - yellowWidth, bottomY - yellowHeight + 2, yellowWidth, yellowHeight),
-                     CGRectMake(yellowX, bottomY - yellowWidth, yellowHeight, yellowWidth),
-                     CGRectMake(ScreenWidth * 0.8 - yellowHeight, bottomY - yellowWidth, yellowHeight, yellowWidth)]
+        let lineY = [CGRect(x: yellowX, y: 100, width: yellowWidth, height: yellowHeight),
+                     CGRect(x: yellowX, y: 100, width: yellowHeight, height: yellowWidth),
+                     CGRect(x: ScreenWidth * 0.8 - yellowHeight, y: 100, width: yellowHeight, height: yellowWidth),
+                     CGRect(x: ScreenWidth * 0.8 - yellowWidth, y: 100, width: yellowWidth, height: yellowHeight),
+                     CGRect(x: yellowX, y: bottomY - yellowHeight + 2, width: yellowWidth, height: yellowHeight),
+                     CGRect(x: ScreenWidth * 0.8 - yellowWidth, y: bottomY - yellowHeight + 2, width: yellowWidth, height: yellowHeight),
+                     CGRect(x: yellowX, y: bottomY - yellowWidth, width: yellowHeight, height: yellowWidth),
+                     CGRect(x: ScreenWidth * 0.8 - yellowHeight, y: bottomY - yellowWidth, width: yellowHeight, height: yellowWidth)]
         
         for yellowRect in lineY {
             buildYellowLineView(yellowRect)
         }
     }
     
-    private func buildLineView(frame: CGRect) {
+    fileprivate func buildLineView(_ frame: CGRect) {
         let lineView = UIView(frame: frame)
         lineView.backgroundColor = UIColor.colorWithCustom(red: 230, gree: 230, blue: 230)
         self.view.addSubview(lineView)
     }
     
-    private func buildYellowLineView(frame: CGRect) {
+    fileprivate func buildYellowLineView(_ frame: CGRect) {
         let yellowView = UIView(frame: frame)
         yellowView.backgroundColor = LFBNavigationYellowColor
         self.view.addSubview(yellowView)
     }
     
-    private func buildTransparentView(frame: CGRect) {
+    fileprivate func buildTransparentView(_ frame: CGRect) {
         let transparentView = UIView(frame: frame)
-        transparentView.backgroundColor = UIColor.blackColor()
+        transparentView.backgroundColor = UIColor.black
         transparentView.alpha = 0.5
         self.view.addSubview(transparentView)
     }
     
-    private func buildAnimationLineView() {
+    fileprivate func buildAnimationLineView() {
         animationLineView.image = UIImage(named: "yellowlight")
         view.addSubview(animationLineView)
         
-        timer = NSTimer(timeInterval: 2.5, target: self, selector: "startYellowViewAnimation", userInfo: nil, repeats: true)
-        let runloop = NSRunLoop.currentRunLoop()
-        runloop.addTimer(timer!, forMode: NSRunLoopCommonModes)
+        timer = Timer(timeInterval: 2.5, target: self, selector: #selector(QRCodeViewController.startYellowViewAnimation), userInfo: nil, repeats: true)
+        let runloop = RunLoop.current
+        runloop.add(timer!, forMode: RunLoopMode.commonModes)
         timer!.fire()
     }
     
     func startYellowViewAnimation() {
         weak var weakSelf = self
-        animationLineView.frame = CGRectMake(ScreenWidth * 0.2 + ScreenWidth * 0.1 * 0.5, 100, ScreenWidth * 0.5, 20)
-        UIView.animateWithDuration(2.5) { () -> Void in
+        animationLineView.frame = CGRect(x: ScreenWidth * 0.2 + ScreenWidth * 0.1 * 0.5, y: 100, width: ScreenWidth * 0.5, height: 20)
+        UIView.animate(withDuration: 2.5, animations: { () -> Void in
             weakSelf!.animationLineView.frame.origin.y += ScreenWidth * 0.55
-        }
+        }) 
     }
     
 }

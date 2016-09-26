@@ -12,17 +12,17 @@ import UIKit
 
 // MARK: - 全局常用属性
 public let NavigationH: CGFloat = 64
-public let ScreenWidth: CGFloat = UIScreen.mainScreen().bounds.size.width
-public let ScreenHeight: CGFloat = UIScreen.mainScreen().bounds.size.height
-public let ScreenBounds: CGRect = UIScreen.mainScreen().bounds
-public let ShopCarRedDotAnimationDuration: NSTimeInterval = 0.2
+public let ScreenWidth: CGFloat = UIScreen.main.bounds.size.width
+public let ScreenHeight: CGFloat = UIScreen.main.bounds.size.height
+public let ScreenBounds: CGRect = UIScreen.main.bounds
+public let ShopCarRedDotAnimationDuration: TimeInterval = 0.2
 public let LFBNavigationBarWhiteBackgroundColor = UIColor.colorWithCustom(red: 249, gree: 250, blue: 253)
 
 // MARK: - Home 属性
 public let HotViewMargin: CGFloat = 10
 public let HomeCollectionViewCellMargin: CGFloat = 10
-public let HomeCollectionTextFont = UIFont.systemFontOfSize(14)
-public let HomeCollectionCellAnimationDuration: NSTimeInterval = 1.0
+public let HomeCollectionTextFont = UIFont.systemFont(ofSize: 14)
+public let HomeCollectionCellAnimationDuration: TimeInterval = 1.0
 
 // MARK: - 通知
  /// 首页headView高度改变
@@ -45,7 +45,7 @@ public let CouponViewControllerMargin: CGFloat = 20
 public let CouponUserRuleURLString = "http://m.beequick.cn/show/webview/p/coupon?zchtauth=e33f2ac7BD%252BaUBDzk6f5D9NDsFsoCcna6k%252BQCEmbmFkTbwnA&__v=ios4.7&__d=d14ryS0MFUAhfrQ6rPJ9Gziisg%2F9Cf8CxgkzZw5AkPMbPcbv%2BpM4HpLLlnwAZPd5UyoFAl1XqBjngiP6VNOEbRj226vMzr3D3x9iqPGujDGB5YW%2BZ1jOqs3ZqRF8x1keKl4%3D"
 
 // MARK: - Cache路径
-public let LFBCachePath: String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
+public let LFBCachePath: String = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!
 
 // MARK: - AuthorURL
 public let GitHubURLString: String = "https://github.com/ZhongTaoTian"

@@ -16,9 +16,9 @@ class ItemRightButton: UIButton {
         let Offset: CGFloat = 15
         
         titleLabel?.sizeToFit()
-        titleLabel?.frame = CGRectMake(Offset, height - Offset, width + Offset, (titleLabel?.height)!)
-        titleLabel?.textAlignment = .Center
+        titleLabel?.frame = CGRect(x: Offset, y: height - Offset, width: width + Offset, height: (titleLabel?.height)!)
+        titleLabel?.textAlignment = .center
         
-        imageView?.frame = CGRectMake(Offset, 0, width + Offset, height - Offset)
-        imageView?.contentMode = UIViewContentMode.Center
+        imageView?.frame = CGRect(x: Offset, y: 0, width: width + Offset, height: height - Offset)
+        imageView?.contentMode = UIViewContentMode.center
     }}

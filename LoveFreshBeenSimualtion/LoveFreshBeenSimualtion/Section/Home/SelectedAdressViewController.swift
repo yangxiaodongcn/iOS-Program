@@ -17,18 +17,18 @@ class SelectedAdressViewController: AnimationViewController {
     }
     
     // MARK: - Build UI
-    private func buildNavigationItem() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem.barButton("扫一扫", titleColor: UIColor.blackColor(), image: UIImage(named: "icon_black_scancode")!, highLightImage: nil, target: self, action: "leftItemClick", type: ItemButtonType.Left)
+    fileprivate func buildNavigationItem() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem.barButton("扫一扫", titleColor: UIColor.black, image: UIImage(named: "icon_black_scancode")!, highLightImage: nil, target: self, action: "leftItemClick", type: ItemButtonType.left)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem.barButton("搜 索", titleColor: UIColor.blackColor(),
+        navigationItem.rightBarButtonItem = UIBarButtonItem.barButton("搜 索", titleColor: UIColor.black,
             image: UIImage(named: "icon_search")!,highLightImage: nil,
-            target: self, action: "rightItemClick", type: ItemButtonType.Right)
+            target: self, action: "rightItemClick", type: ItemButtonType.right)
         
-        let titleView = AddressTitleView(frame: CGRectMake(0, 0, 0, 30))
-        titleView.frame = CGRectMake(0, 0, titleView.addressWidth, 30)
+        let titleView = AddressTitleView(frame: CGRect(x: 0, y: 0, width: 0, height: 30))
+        titleView.frame = CGRect(x: 0, y: 0, width: titleView.addressWidth, height: 30)
         navigationItem.titleView = titleView
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: "titleViewClick")
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SelectedAdressViewController.titleViewClick))
         navigationItem.titleView?.addGestureRecognizer(tapGesture)
     }
     
